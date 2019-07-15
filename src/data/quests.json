@@ -1,0 +1,541 @@
+[
+  {
+    "id": 14,
+    "project": 0,
+    "epic": "Management",
+    "title": "Write down all the User Stories",
+    "status": "doing",
+    "prio": 3,
+    "estimation": "4:00",
+    "thisWeek": true,
+    "loggedBy": [2, 3],
+    "targetBy": [0, 1],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": true
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": true
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": false
+      },
+      {
+        "id": 4,
+        "title": "Just answer the question",
+        "isDone": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "project": 0,
+    "epic": "Prototype",
+    "title": "Design Filter component",
+    "status": "doing",
+    "prio": 3,
+    "estimation": "2:00",
+    "thisWeek": true,
+    "loggedBy": [],
+    "targetBy": [2, 3],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": true
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": false
+      },
+      {
+        "id": 4,
+        "title": "Just answer the question",
+        "isDone": true
+      },
+      {
+        "id": 5,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 6,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 7,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "project": 0,
+    "epic": "Prototype",
+    "title": "Design Nav component",
+    "status": "doing",
+    "prio": 3,
+    "estimation": "2:00",
+    "thisWeek": true,
+    "loggedBy": [0],
+    "targetBy": [4],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "project": 0,
+    "epic": "Prototype",
+    "title": "Design Focus component",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "8:00",
+    "thisWeek": true,
+    "loggedBy": [0, 5],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": false
+      },
+      {
+        "id": 4,
+        "title": "Just answer the question",
+        "isDone": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "project": 0,
+    "epic": "Prototype",
+    "title": "Design Backlog component",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "4:00",
+    "thisWeek": true,
+    "loggedBy": [0, 3],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "project": 0,
+    "epic": "Prototype",
+    "title": "Design Auth component",
+    "status": "done",
+    "prio": 3,
+    "estimation": "2:00",
+    "thisWeek": true,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": true
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": true
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": true
+      },
+      {
+        "id": 4,
+        "title": "Super hard issue",
+        "isDone": true
+      },
+      {
+        "id": 5,
+        "title": "Do it. Just do it.",
+        "isDone": true
+      },
+      {
+        "id": 6,
+        "title": "Isn't it easy?",
+        "isDone": true
+      },
+      {
+        "id": 7,
+        "title": "Create something cool",
+        "isDone": true
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "project": 0,
+    "epic": "Auth",
+    "title": "As a user I want to log in",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "project": 0,
+    "epic": "Auth",
+    "title": "As a user I want to sign up",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "project": 0,
+    "epic": "Auth",
+    "title": "As a user I want to reset my password",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "project": 0,
+    "epic": "Auth",
+    "title": "As a user I want to resend my confirmation email",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "project": 0,
+    "epic": "Auth",
+    "title": "As a user I want to log out",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "project": 0,
+    "epic": "User",
+    "title": "As a user I want only see the entities I am allowed to see.",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "project": 0,
+    "epic": "Nav",
+    "title": "As a user I want to see my logo within the navigation",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "project": 0,
+    "epic": "Nav",
+    "title": "As a user I want to see breadcrumbz to see my current path.",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "project": 0,
+    "epic": "Backlog",
+    "title": "As a user I want to see a Backlog with all available quests.",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "project": 0,
+    "epic": "Backlog",
+    "title": "As a user I want to see all quests for this week and upcoming quests separated.",
+    "status": "todo",
+    "prio": 3,
+    "estimation": "TBD",
+    "thisWeek": false,
+    "loggedBy": [],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  }
+]

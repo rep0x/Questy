@@ -1,0 +1,54 @@
+[
+  {
+    "id": 0,
+    "owner": 0,
+    "name": "Questy",
+    "epics": [
+      "Concept",
+      "Management",
+      "Branding",
+      "Prototype",
+      "Landing Page",
+      "Auth",
+      "Nav",
+      "Search",
+      "Mode",
+      "Backlog",
+      "Questlog",
+      "Focus",
+      "Kanban",
+      "Dashboard",
+      "Roadmap",
+      "Team",
+      "Settings"
+    ]
+  },
+  {
+    "id": 1,
+    "owner": 0,
+    "name": "Pages",
+    "epics": [
+      "Concept",
+      "Management",
+      "Branding",
+      "Prototype",
+      "Landing Page",
+      "Auth",
+      "Nav"
+    ]
+  },
+  {
+    "id": 2,
+    "owner": 0,
+    "name": "Collections",
+    "epics": [
+      "Concept",
+      "Management",
+      "Branding",
+      "Prototype",
+      "Landing Page",
+      "Auth",
+      "Nav"
+    ]
+  }
+]

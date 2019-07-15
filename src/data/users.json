@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "name": "r3p0x",
+    "email": "svreiser@gmail.com",
+    "password": "password",
+    "avatar": "/users/male_1.png",
+    "role": "UX/UI"
+  },
+  {
+    "id": 1,
+    "name": "Pete",
+    "email": "svreiser@gmail.com",
+    "password": "password",
+    "avatar": "/users/male_2.png",
+    "role": "Fullstack"
+  },
+  {
+    "id": 2,
+    "name": "Lorra",
+    "email": "svreiser@gmail.com",
+    "password": "password",
+    "avatar": "/users/female_1.png",
+    "role": "Frontend"
+  },
+  {
+    "id": 3,
+    "name": "KauZ",
+    "email": "svreiser@gmail.com",
+    "password": "password",
+    "avatar": "/users/male_3.png",
+    "role": "Owner"
+  },
+  {
+    "id": 4,
+    "name": "Roxanne",
+    "email": "svreiser@gmail.com",
+    "password": "password",
+    "avatar": "/users/female_2.png",
+    "role": "UX"
+  }
+]
