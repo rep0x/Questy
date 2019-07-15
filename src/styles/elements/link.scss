@@ -1,0 +1,35 @@
+.link {
+  position: relative;
+  text-decoration: none;
+  color: var(--dark);
+  opacity: 0.5;
+  font-size: 16px;
+  outline: none;
+  margin-top: 5px;
+  transition: var(--transition-cubic);
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 20px;
+    width: 14px;
+    opacity: 0;
+    background-image: url('/assets/caret-focus.svg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: var(--transition-cubic);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover,
+  &:focus {
+    opacity: 1;
+    margin-left: 20px;
+    &:before {
+      opacity: 1;
+    }
+  }
+}
