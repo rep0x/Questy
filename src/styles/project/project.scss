@@ -23,9 +23,18 @@
       left: 0;
       width: 50px;
       margin: 0;
+      padding: 0;
       border-radius: var(--radius) 0 0 var(--radius);
+      list-style-type: none;
       &--item {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
+          max-height: 20px;
+          max-width: 20px;
         }
       }
     }
