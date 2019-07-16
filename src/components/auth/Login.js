@@ -17,8 +17,8 @@ const Login = props => {
     password: ''
   })
 
-  let newFormData = formData
   const validateUsername = (boolean, value) => {
+    let newFormData = formData
     newFormData.username = value
     setFormData(newFormData)
     setValidUsername(boolean)
@@ -26,20 +26,18 @@ const Login = props => {
   }
 
   const validatePassword = (boolean, value) => {
+    let newFormData = formData
     newFormData.password = value
     setFormData(newFormData)
-    console.log('formData', formData)
     setValidPassword(boolean)
     validateForm(boolean)
   }
 
   const validateForm = boolean => {
-    if (boolean) {
-      if (validUsername && validPassword) {
-        setValidForm(true)
-      }
+    if (boolean && validUsername && validPassword) {
+      setValidForm(boolean)
     } else {
-      setValidForm(false)
+      setValidForm(boolean)
     }
   }
 
