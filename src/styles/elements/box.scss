@@ -5,6 +5,7 @@
   .box-header {
     height: 50px;
     background-color: var(--light_50);
+    border-radius: var(--radius) var(--radius) 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,5 +18,9 @@
   .box-body {
     padding: 20px;
     padding-bottom: 0;
+  }
+  .box-footer {
+    background-color: var(--light_50);
+    border-radius: 0 0 var(--radius) var(--radius);
   }
 }

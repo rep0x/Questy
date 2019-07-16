@@ -22,7 +22,11 @@ const Login = props => {
     newFormData.username = value
     setFormData(newFormData)
     setValidUsername(boolean)
-    validateForm(boolean)
+    if (boolean === true && validUsername === true && validPassword === true) {
+      setValidForm(true)
+    } else {
+      setValidForm(false)
+    }
   }
 
   const validatePassword = (boolean, value) => {
@@ -30,11 +34,7 @@ const Login = props => {
     newFormData.password = value
     setFormData(newFormData)
     setValidPassword(boolean)
-    validateForm(boolean)
-  }
-
-  const validateForm = boolean => {
-    if (boolean && validUsername && validPassword) {
+    if (boolean === true && validUsername === true && validPassword === true) {
       setValidForm(boolean)
     } else {
       setValidForm(boolean)
@@ -42,7 +42,6 @@ const Login = props => {
   }
 
   const formSubmit = e => {
-    console.log('Users.length', users.length)
     for (let i = 0; i < users.length; i++) {
       if (
         formData.username === users[i].name &&
@@ -56,6 +55,12 @@ const Login = props => {
         setCurrentUser(users[i].name)
         props.history.push('/project')
         return
+      } else if (formData.username === '' || formData.password === '') {
+        setAlert({
+          type: 'notice',
+          msg: 'Please enter username and password',
+          isOpen: true
+        })
       } else {
         setAlert({
           type: 'error',
@@ -93,7 +98,7 @@ const Login = props => {
           className={`btn btn-auth float-right ${validForm ? 'valid' : ''}`}
           onClick={formSubmit}
         >
-          <SvgArrowRight validForm={validForm} />
+          <SvgArrowRight />
         </button>
       </form>
       <div className='footer'>
