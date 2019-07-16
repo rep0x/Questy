@@ -9,7 +9,7 @@ import Header from '../components/auth/Header'
 
 const Auth = ({ children, ...rest }) => {
   return (
-    <div className='app auth'>
+    <div className='App auth'>
       <div className='container'>
         <div className='form-wrapper'>
           <Header />

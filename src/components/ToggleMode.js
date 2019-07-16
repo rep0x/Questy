@@ -12,7 +12,7 @@ const ToggleMode = () => {
     setMode(updatedMode)
   }
   return (
-    <div className='toggle-mode' onClick={toggleMode}>
+    <div className='toggle-mode box' onClick={toggleMode}>
       <img src={mode ? moon : sun} alt='' className='icon' />
     </div>
   )

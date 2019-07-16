@@ -14,5 +14,12 @@
 // A U T H
 @import './auth/auth.scss';
 
+// P R O J E C T
+@import './project/header.scss';
+@import './project/project.scss';
+
+// Q U E S T L O G
+@import './questlog/questlog.scss';
+
 // C O M P O N E N T S
 @import './toggle-mode';
