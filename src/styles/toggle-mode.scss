@@ -4,12 +4,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 30px;
-  right: 30px;
   transition: var(--transition);
   &:hover {
     box-shadow: var(--box-shadow__primary);
     cursor: pointer;
   }
+}
+
+.auth .toggle-mode {
+  position: fixed;
+  top: 30px;
+  right: 30px;
 }
