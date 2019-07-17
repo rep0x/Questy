@@ -1,0 +1,31 @@
+.label {
+  padding: 5px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--black_50);
+  background-color: var(--black_05);
+  &.todo {
+    color: var(--white_fix);
+    background-color: var(--primary);
+  }
+  &.doing {
+    color: var(--white_fix);
+    background-color: var(--yellow);
+  }
+  &.done {
+    color: var(--white_fix);
+    background-color: var(--green);
+  }
+  &.prio {
+    color: var(--white_fix);
+    background-color: var(--red);
+  }
+  &.icon {
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 3px;
+    }
+  }
+}

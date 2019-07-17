@@ -71,7 +71,6 @@ const QuestList = () => {
   const questList = quests.map((quest, index) => (
     <QuestItem key={index} quest={quest} />
   ))
-  const columns = ['']
   return (
     <div>
       {/* P E R S O N A L    S E E D */}
@@ -83,20 +82,19 @@ const QuestList = () => {
         Create
       </button> */}
 
-      <h2>This week</h2>
       <div className='table'>
         <div className='thead'>
           <div className='tr'>
-            <div className='th'>ID</div>
-            <div className='th'>Epic</div>
-            <div className='th'>Title</div>
-            <div className='th'>Status</div>
-            <div className='th'>Prio</div>
-            <div className='th'>Estimation</div>
-            <div className='th'>Spent</div>
-            <div className='th'>Progress</div>
-            <div className='th'>Performance</div>
-            <div className='th'>Active Contributors</div>
+            <div className='th col-1'>ID</div>
+            <div className='th col-3'>Epic</div>
+            <div className='th col-6'>Title</div>
+            <div className='th col-2'>Status</div>
+            <div className='th col-1'>Prio</div>
+            <div className='th col-1'>Weight</div>
+            <div className='th col-1'>Spent</div>
+            <div className='th col-4'>Progress</div>
+            <div className='th col-2'>Performance</div>
+            <div className='th col-3'>Contributors</div>
           </div>
         </div>
         <div className='tbody'>{questList}</div>

@@ -47,7 +47,7 @@ const Checkbox = ({ id, label }) => {
         onBlur={onBlur}
         onChange={onChange}
       />
-      <span className='label'>{label}</span>
+      <span className='checkbox-label'>{label}</span>
     </div>
   )
 }

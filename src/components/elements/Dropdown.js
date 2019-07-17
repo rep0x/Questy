@@ -14,7 +14,7 @@ const Dropdown = () => {
     <div className={`dropdown ${open ? 'open' : ''}`}>
       <div className='selected' onClick={toggleDropdown}>
         <div className='selected-item'>
-          <span className='label'>Project</span>
+          <span className='dropdown-label'>Project</span>
           <input type='text' value='Questy' />
         </div>
         <div className='caret'>

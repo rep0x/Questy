@@ -22,6 +22,8 @@ const App = props => {
   const Root = styled.div`
     --black: ${mode ? 'rgba(44, 44, 44, 1)' : 'rgba(255, 255, 255, 1)'};
     --black_25: ${mode ? 'rgba(44, 44, 44, .25)' : 'rgba(255, 255, 255, .25)'};
+    --black_50: ${mode ? 'rgba(44, 44, 44, .50)' : 'rgba(255, 255, 255, .50)'};
+    --black_05: ${mode ? 'rgba(44, 44, 44, .05)' : 'rgba(255, 255, 255, .05)'};
     --dark: ${mode ? 'rgba(65, 65, 65, 1)' : 'rgba(235, 234, 236, 1)'};
     --light: ${mode ? 'rgba(235, 234, 236, 1)' : 'rgba(65, 65, 65, 1)'};
     --light_50: ${mode ? 'rgba(235, 234, 236, 0.5)' : 'rgba(65, 65, 65, 0.5)'};

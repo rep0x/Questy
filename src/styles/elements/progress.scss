@@ -1,0 +1,42 @@
+.progress-container {
+  position: relative;
+  width: 100%;
+  height: 29px;
+  border-radius: var(--radius-sm);
+  padding: 0 6px;
+  background-size: cover;
+  background-position: center center;
+  color: var(--white_fix);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  &.untouched {
+    color: var(--black_50);
+    .progress-overlay {
+      background-color: var(--light);
+    }
+  }
+  .progress-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: inherit;
+    background-color: var(--black_50_fix);
+  }
+  .progress-numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    .progress-todos {
+      .progress-done {
+      }
+      .progress-total {
+        opacity: 0.5;
+      }
+    }
+    .progress-percentage {
+    }
+  }
+}
