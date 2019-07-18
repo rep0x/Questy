@@ -3,35 +3,47 @@ import React, { useState } from 'react'
 // A S S E T S
 import SvgCaretDown from '../../assets/icons/caretDown'
 
-const Dropdown = () => {
+const Dropdown = ({ options }) => {
   const [open, setOpen] = useState(false)
+  const [current, setCurrent] = useState(options.options[options.default])
+  console.log(current)
+
   const toggleDropdown = () => {
     let newState = !open
     setOpen(newState)
-    console.log('Es geht schon')
   }
+
+  const changeValue = value => {
+    setCurrent(value)
+    toggleDropdown()
+    console.log('Current: ', current)
+    console.log('SetCurrent: ', value)
+  }
+
+  let labelOutput
+  if (options.label !== null) {
+    labelOutput = <span className='dropdown-label'>{options.label}</span>
+  }
+
+  let optionsOutput = options.options
+    .filter(option => option !== current)
+    .map((option, i) => (
+      <div key={i} className='option' onClick={() => changeValue(option)}>
+        <span className='option-value'>{option}</span>
+      </div>
+    ))
   return (
     <div className={`dropdown ${open ? 'open' : ''}`}>
       <div className='selected' onClick={toggleDropdown}>
         <div className='selected-item'>
-          <span className='dropdown-label'>Project</span>
-          <input type='text' value='Questy' />
+          <span className='dropdown-label'>{labelOutput}</span>
+          <span>{current}</span>
         </div>
         <div className='caret'>
           <SvgCaretDown />
         </div>
       </div>
-      <div className='options'>
-        <div className='option'>
-          <span className='option-value'>Düsentrieb</span>
-        </div>
-        <div className='option'>
-          <span className='option-value'>Pages</span>
-        </div>
-        <div className='option'>
-          <span className='option-value'>Collections</span>
-        </div>
-      </div>
+      <div className='options'>{optionsOutput}</div>
     </div>
   )
 }
