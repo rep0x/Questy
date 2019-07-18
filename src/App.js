@@ -28,6 +28,7 @@ const App = props => {
     --light: ${mode ? 'rgba(235, 234, 236, 1)' : 'rgba(65, 65, 65, 1)'};
     --light_50: ${mode ? 'rgba(235, 234, 236, 0.5)' : 'rgba(65, 65, 65, 0.5)'};
     --white: ${mode ? 'rgba(255, 255, 255, 1)' : 'rgba(44, 44, 44, 1)'};
+    --white_50: ${mode ? 'rgba(255, 255, 255, .5)' : 'rgba(44, 44, 44, .5)'};
     --box-shadow: ${mode
       ? '0 0 3px rgba(44, 44, 44, .25)'
       : '0 0 3px rgba(255, 255, 255, .25)'};

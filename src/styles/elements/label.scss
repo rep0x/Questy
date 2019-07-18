@@ -4,6 +4,9 @@
   font-size: 14px;
   color: var(--black_50);
   background-color: var(--black_05);
+  &.active {
+    color: var(--black);
+  }
   &.todo {
     color: var(--white_fix);
     background-color: var(--primary);

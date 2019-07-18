@@ -5,11 +5,13 @@
   border-radius: var(--radius-sm);
   padding: 0 6px;
   background-size: cover;
-  background-position: center center;
+  background-position: 0 0;
+  background-repeat: repeat-x;
   color: var(--white_fix);
   display: flex;
   align-items: center;
   overflow: hidden;
+  -webkit-animation: slide 20s linear infinite;
   &.untouched {
     color: var(--black_50);
     .progress-overlay {
@@ -22,6 +24,7 @@
     right: 0;
     height: inherit;
     background-color: var(--black_50_fix);
+    border-left: 1px solid var(--white_50);
   }
   .progress-numbers {
     display: flex;
@@ -38,5 +41,13 @@
     }
     .progress-percentage {
     }
+  }
+}
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -400px 0;
   }
 }

@@ -48,6 +48,7 @@
   .tbody {
     .tr {
       margin-bottom: 5px;
+      transition: var(--transition);
       &:hover {
         box-shadow: var(--box-shadow__primary);
         cursor: pointer;

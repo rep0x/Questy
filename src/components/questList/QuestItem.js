@@ -24,16 +24,37 @@ const QuestItem = ({ quest }) => {
         {quest.estimation}
       </div>
     )
-  } else {
-    weigthOutput = <div className='label'>{quest.estimation}</div>
   }
 
-  let progressOutput
   const todoIsDone = value => {
     return value.isDone === true
   }
   const doneTodos = quest.todos.filter(todoIsDone)
   let progress = doneTodos.length / quest.todos.length
+
+  let spent = quest.spent
+  let hours
+  let minutes
+  let spentOutput
+  if (spent) {
+    hours = Math.floor(quest.spent)
+    minutes = Math.round((spent - hours) * 60)
+    spentOutput = (
+      <div className='label active'>
+        {hours}:{minutes}
+      </div>
+    )
+  }
+  let performance = 0
+  let performanceOutput
+  if (spent > 0) {
+    performance = Math.round((quest.estimation / quest.spent - 1) * 100)
+    if (quest.estimation < quest.spent) {
+      performanceOutput = <div className='label prio'>{performance}%</div>
+    } else {
+      performanceOutput = <div className='label done'>+{performance}%</div>
+    }
+  }
 
   return (
     <div className='tr'>
@@ -49,8 +70,8 @@ const QuestItem = ({ quest }) => {
         </div>
       </div>
       <div className='td col-1'>{weigthOutput}</div>
-      <div className='td col-1'>{quest.spent}</div>
-      <div className='td col-4' dataProgress='100'>
+      <div className='td col-1'>{spentOutput}</div>
+      <div className='td col-4'>
         <div
           className={`progress-container ${progress === 0 ? 'untouched' : ''}`}
           style={{ backgroundImage: `url(${wave})` }}
@@ -70,7 +91,7 @@ const QuestItem = ({ quest }) => {
           </div>
         </div>
       </div>
-      <div className='td col-2'>0%</div>
+      <div className='td col-2'>{performanceOutput}</div>
       <div className='td col-3' />
     </div>
   )
