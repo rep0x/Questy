@@ -15,7 +15,7 @@ const Alert = ({ type, msg }) => {
       isOpen: false
     })
   }
-
+  console.log('Alert got rendered')
   const AnimatedAlert = posed.div({
     visible: { scale: 1 },
     hidden: { scale: 0 }
