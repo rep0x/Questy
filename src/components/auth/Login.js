@@ -8,7 +8,7 @@ import SvgArrowRight from '../../assets/icons/arrowRight'
 import { GlobalContext } from '../../context/GlobalContext'
 
 const Login = props => {
-  const { users, alert, setAlert, setCurrentUser } = useContext(GlobalContext)
+  const { users, setAlert, setCurrentUser } = useContext(GlobalContext)
   const [validForm, setValidForm] = useState(false)
   const [validUsername, setValidUsername] = useState(false)
   const [validPassword, setValidPassword] = useState(false)

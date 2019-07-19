@@ -74,13 +74,13 @@ const QuestList = () => {
   return (
     <div>
       {/* P E R S O N A L    S E E D */}
-      {/* <p>Seed: {seed}</p> */}
+      <p>Seed: {seed}</p>
 
       {/* M E T H O D :   C R E A T E  */}
-      {/* <input value={quest.title} onChange={onChange} type='text' />
+      <input value={quest.title} onChange={onChange} type='text' />
       <button type='submit' onClick={createQuest}>
         Create
-      </button> */}
+      </button>
 
       <div className='table'>
         <div className='thead'>

@@ -23,7 +23,7 @@ export const GlobalContextProvider = props => {
 
   const [currentUser, setCurrentUser] = useState()
 
-  const [mode, setMode] = useState(true)
+  const [theme, setTheme] = useState(false)
 
   let temp_seed = localStorage.getItem('seed')
 
@@ -43,8 +43,8 @@ export const GlobalContextProvider = props => {
     setProjects,
     quests,
     setQuests,
-    mode,
-    setMode,
+    theme,
+    setTheme,
     seed,
     alert,
     setAlert

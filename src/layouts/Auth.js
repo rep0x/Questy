@@ -4,7 +4,6 @@ import React from 'react'
 import bgImage from '../assets/bg.png'
 
 // C O M P O N E N T S
-import ToggleMode from '../components/ToggleMode'
 import Header from '../components/auth/Header'
 
 const Auth = ({ children, ...rest }) => {
@@ -20,7 +19,6 @@ const Auth = ({ children, ...rest }) => {
           style={{ backgroundImage: `url(${bgImage})` }}
         />
       </div>
-      <ToggleMode />
     </div>
   )
 }

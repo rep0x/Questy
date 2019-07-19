@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/index.scss'
-import App from './App'
+import Theme from './Theme'
 import { GlobalContextProvider } from './context/GlobalContext'
 
 ReactDOM.render(
   <GlobalContextProvider>
-    <App />
+    <Theme />
   </GlobalContextProvider>,
   document.getElementById('root')
 )
