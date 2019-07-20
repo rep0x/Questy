@@ -21,6 +21,9 @@
     &:first-child {
       border-radius: var(--radius) 0 0 0;
     }
+    &:last-child {
+      border-radius: 0 0 0 var(--radius);
+    }
     img {
       max-height: 20px;
       max-width: 20px;

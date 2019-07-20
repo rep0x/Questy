@@ -73,6 +73,7 @@
         }
       }
       &:first-child {
+        border-radius: var(--radius) var(--radius) 0 0;
         .td {
           &:first-child {
             border-radius: var(--radius) 0 0 0;
@@ -83,6 +84,7 @@
         }
       }
       &:last-child {
+        border-radius: 0 0 var(--radius) var(--radius);
         .td {
           &:first-child {
             border-radius: 0 0 0 var(--radius);
