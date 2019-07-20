@@ -32,7 +32,7 @@ export const GlobalContextProvider = props => {
     localStorage.setItem('seed', temp_seed)
   }
 
-  const [seed, setSeed] = useState(temp_seed)
+  const [seed] = useState(temp_seed)
 
   const context = {
     users,
