@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Questy/static/css/main.55ab33e5.chunk.css",
+    "main.js": "/Questy/static/js/main.f3233a28.chunk.js",
+    "main.js.map": "/Questy/static/js/main.f3233a28.chunk.js.map",
+    "runtime~main.js": "/Questy/static/js/runtime~main.f3d7b617.js",
+    "runtime~main.js.map": "/Questy/static/js/runtime~main.f3d7b617.js.map",
+    "static/js/2.d7e3d2ea.chunk.js": "/Questy/static/js/2.d7e3d2ea.chunk.js",
+    "static/js/2.d7e3d2ea.chunk.js.map": "/Questy/static/js/2.d7e3d2ea.chunk.js.map",
+    "index.html": "/Questy/index.html",
+    "precache-manifest.b9bf1effe2257e7b5d8ef1697325fa1d.js": "/Questy/precache-manifest.b9bf1effe2257e7b5d8ef1697325fa1d.js",
+    "service-worker.js": "/Questy/service-worker.js",
+    "static/css/main.55ab33e5.chunk.css.map": "/Questy/static/css/main.55ab33e5.chunk.css.map",
+    "static/media/bg.png": "/Questy/static/media/bg.5af79037.png",
+    "static/media/moon.svg": "/Questy/static/media/moon.d194f178.svg",
+    "static/media/sun.svg": "/Questy/static/media/sun.b518b95c.svg"
+  }
+}
