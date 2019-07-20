@@ -13,7 +13,7 @@ export const GlobalContextProvider = props => {
   const [users, setUsers] = useState(initialUsers)
 
   const [projects, setProjects] = useState(initialProjects)
-  const [currentProject, setCurrentProject] = useState(projects[0].name)
+  const [currentProject, setCurrentProject] = useState(projects[0])
 
   const initialQuests = JSON.parse(
     localStorage.getItem('quests') || JSON.stringify(initialQuestsData)

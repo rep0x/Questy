@@ -5,7 +5,7 @@ import SvgCaretDown from '../../assets/icons/caretDown'
 
 const Dropdown = ({ options, changeCurrent }) => {
   const [open, setOpen] = useState(false)
-  const [current, setCurrent] = useState(options.default)
+  const [current] = useState(options.default)
 
   const toggleDropdown = () => {
     let newState = !open
@@ -13,7 +13,6 @@ const Dropdown = ({ options, changeCurrent }) => {
   }
 
   const changeValue = value => {
-    // setCurrent(value)
     changeCurrent(value)
     toggleDropdown()
   }

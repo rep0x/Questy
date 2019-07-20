@@ -13,21 +13,24 @@ import initialProjects from '../../data/projects.json'
 import { GlobalContext } from '../../context/GlobalContext'
 
 const Nav = () => {
-  const { currentProject, setCurrentProject } = useContext(GlobalContext)
-  console.log(currentProject)
+  const { currentProject, projects, setCurrentProject } = useContext(
+    GlobalContext
+  )
   let projectNames = []
   initialProjects.forEach(project => {
     projectNames.push(project.name)
   })
-  console.log('ProjectNames: ', projectNames)
   let dropdownOptions = {
     label: 'Project',
     icon: null,
-    default: currentProject,
+    default: currentProject.name,
     options: projectNames
   }
   const changeCurrent = value => {
-    setCurrentProject(value)
+    let newProject = projects.find(function(project) {
+      return project.name === value
+    })
+    setCurrentProject(newProject)
   }
   return (
     <nav className='nav box'>

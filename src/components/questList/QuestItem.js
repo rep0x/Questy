@@ -8,7 +8,8 @@ import SvgCurrency from '../../assets/icons/currency'
 import SvgBin from '../../assets/icons/bin'
 import wave from '../../assets/waves/wave-row.png'
 
-const QuestItem = ({ quest }) => {
+const QuestItem = ({ quest, epics }) => {
+  console.log(epics)
   let prioOutput
   if (quest.prio === 3) {
     prioOutput = '!!!'
