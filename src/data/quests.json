@@ -542,5 +542,170 @@
         "isDone": false
       }
     ]
+  },
+  {
+    "id": 14,
+    "project": 1,
+    "epic": "Management",
+    "title": "Write down all the User Stories",
+    "status": "doing",
+    "prio": 3,
+    "estimation": 4,
+    "spent": 2,
+    "thisWeek": true,
+    "loggedBy": [2, 3],
+    "targetBy": [0, 1],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": true
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": true
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": false
+      },
+      {
+        "id": 4,
+        "title": "Just answer the question",
+        "isDone": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "project": 1,
+    "epic": "Prototype",
+    "title": "Design Filter component",
+    "status": "doing",
+    "prio": 3,
+    "estimation": 2,
+    "spent": 1.5,
+    "thisWeek": true,
+    "loggedBy": [],
+    "targetBy": [2, 3],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": true
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": false
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": false
+      },
+      {
+        "id": 4,
+        "title": "Just answer the question",
+        "isDone": true
+      },
+      {
+        "id": 5,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 6,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 7,
+        "title": "Isn't it easy?",
+        "isDone": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "project": 2,
+    "epic": "Prototype",
+    "title": "Design Nav component",
+    "status": "doing",
+    "prio": 3,
+    "estimation": 2,
+    "spent": 1.4,
+    "thisWeek": true,
+    "loggedBy": [0],
+    "targetBy": [4],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "project": 2,
+    "epic": "Prototype",
+    "title": "Design Focus component",
+    "status": "todo",
+    "prio": 3,
+    "estimation": 8,
+    "spent": 4.3,
+    "thisWeek": true,
+    "loggedBy": [0, 5],
+    "targetBy": [],
+    "todos": [
+      {
+        "id": 0,
+        "title": "Super hard issue",
+        "isDone": false
+      },
+      {
+        "id": 1,
+        "title": "Do it. Just do it.",
+        "isDone": false
+      },
+      {
+        "id": 2,
+        "title": "Isn't it easy?",
+        "isDone": true
+      },
+      {
+        "id": 3,
+        "title": "Create something cool",
+        "isDone": false
+      },
+      {
+        "id": 4,
+        "title": "Just answer the question",
+        "isDone": true
+      }
+    ]
   }
 ]
