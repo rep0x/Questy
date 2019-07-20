@@ -1,25 +1,43 @@
-import React from 'react'
+import React, { useContext, Fragment } from 'react'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 
 // L A Y O U T
 import AuthLayout from './layouts/AuthLayout'
 import ProjectLayout from './layouts/ProjectLayout'
-import QuestLayout from './layouts/QuestLayout'
 
 // C O M P O N E N T S
 import Login from './components/auth/Login'
 import Signup from './components/auth/Signup'
 import Alert from './components/elements/Alert'
 import Backlog from './components/project/Backlog'
+import { GlobalContext } from './context/GlobalContext'
 
 const App = props => {
+  const { currentUser } = useContext(GlobalContext)
+  console.log("currentUser", currentUser)
+
+  let routesOutput = ''
+
+  if (currentUser) {
+    routesOutput = (
+      <Fragment>
+        <ProjectLayout exact path='/' component={Backlog} />
+        <ProjectLayout path='/projects' component={Backlog} />
+      </Fragment>
+    )
+  } else {
+    routesOutput = (
+      <Fragment>
+        <AuthLayout path='/' exact component={Login} props={props} />
+        <AuthLayout path='/signup' component={Signup} />
+      </Fragment>
+    )
+  }
+
   return (
     <Router>
       <Switch>
-        <AuthLayout path='/' exact component={Login} props={props} />
-        <AuthLayout path='/signup' component={Signup} />
-        <ProjectLayout path='/project' component={Backlog} />
-        <QuestLayout exact path='/project/quest' />
+        {routesOutput}
       </Switch>
       <Alert />
     </Router>

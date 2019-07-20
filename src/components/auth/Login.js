@@ -4,11 +4,14 @@ import Input from '../elements/Input'
 import Checkbox from '../elements/Checkbox'
 import SvgArrowRight from '../../assets/icons/arrowRight'
 
+import { authenticationService } from '../../services';
+
+
 // C O N T E X T
 import { GlobalContext } from '../../context/GlobalContext'
 
 const Login = props => {
-  const { users, setAlert, setCurrentUser } = useContext(GlobalContext)
+  const { setAlert, setCurrentUser } = useContext(GlobalContext)
   const [validForm, setValidForm] = useState(false)
   const [validUsername, setValidUsername] = useState(false)
   const [validPassword, setValidPassword] = useState(false)
@@ -42,33 +45,37 @@ const Login = props => {
   }
 
   const formSubmit = e => {
-    for (let i = 0; i < users.length; i++) {
-      if (
-        formData.username === users[i].name &&
-        formData.password === users[i].password
-      ) {
-        setAlert({
-          type: 'success',
-          msg: 'Successfully signed in',
-          isOpen: true
-        })
-        setCurrentUser(users[i].name)
-        props.history.push('/project')
-        return
-      } else if (formData.username === '' || formData.password === '') {
-        setAlert({
-          type: 'notice',
-          msg: 'Please enter username and password',
-          isOpen: true
-        })
-      } else {
-        setAlert({
-          type: 'error',
-          msg: 'Username or password is wrong!',
-          isOpen: true
-        })
-      }
+
+    if (formData.username === '' || formData.password === '') {
+      setAlert({
+        type: 'notice',
+        msg: 'Please enter username and password',
+        isOpen: true
+      })
+    } else {
+      authenticationService.login(formData.username, formData.password)
+        .then(
+          user => {
+            setAlert({
+              type: 'success',
+              msg: 'Successfully signed in',
+              isOpen: true
+            })
+            setCurrentUser(user.username)
+            props.history.push('/project')
+            
+          },
+          error => {
+            setAlert({
+              type: 'error',
+              msg: error,
+              isOpen: true
+            })
+          }
+        );
     }
+
+
     e.preventDefault()
   }
 
@@ -89,7 +96,7 @@ const Login = props => {
           type='password'
           placeholder='Password'
           lastChild={true}
-          minLength={8}
+          minLength={6}
           updateValidation={validatePassword}
         />
         <Checkbox id='stay-signed-in' label='stay signed in' />
