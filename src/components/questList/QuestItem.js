@@ -9,7 +9,6 @@ import SvgBin from '../../assets/icons/bin'
 import wave from '../../assets/waves/wave-row.png'
 
 const QuestItem = ({ quest, epics }) => {
-  console.log(epics)
   let prioOutput
   if (quest.prio === 3) {
     prioOutput = '!!!'
@@ -50,7 +49,7 @@ const QuestItem = ({ quest, epics }) => {
         col={3}
         editable={true}
         type={'dropdown'}
-        options={['Prototype', 'Concept', 'Auth']}
+        options={epics}
       />
       <Td
         data={quest.title}

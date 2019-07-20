@@ -13,7 +13,7 @@ import QuestLog from '../questlog/QuestLog'
 import { GlobalContext } from '../../context/GlobalContext'
 
 const Backlog = () => {
-  const { projects, setProjects } = useContext(GlobalContext)
+  const { projects } = useContext(GlobalContext)
   const currentProject = projects[0].name
 
   const changeProject = () => {}
