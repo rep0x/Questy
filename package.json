@@ -1,7 +1,8 @@
 {
   "name": "quests",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://rep0x.github.io/Questy",
   "dependencies": {
     "@iota/core": "^1.0.0-beta.17",
     "@iota/mam": "^0.7.3",
