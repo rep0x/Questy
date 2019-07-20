@@ -7,7 +7,7 @@ import { GlobalContext } from '../../context/GlobalContext'
 import QuestItem from './QuestItem'
 
 const QuestList = () => {
-  const { quests, setQuests, currentProject } = useContext(GlobalContext)
+  const { quests, currentProject } = useContext(GlobalContext)
 
   const updateQuest = () => {
     console.log('Update Quest')
@@ -16,16 +16,18 @@ const QuestList = () => {
   const deleteQuest = () => {
     console.log('Delete Quest')
   }
-  console.log(currentProject.epics)
-  const questList = quests.map((quest, index) => (
-    <QuestItem
-      key={index}
-      quest={quest}
-      updateQuest={updateQuest}
-      deleteQuest={deleteQuest}
-      epics={currentProject.epics}
-    />
-  ))
+
+  const questList = quests
+    .filter(quest => quest.project === currentProject.id)
+    .map((quest, index) => (
+      <QuestItem
+        key={index}
+        quest={quest}
+        updateQuest={updateQuest}
+        deleteQuest={deleteQuest}
+        epics={currentProject.epics}
+      />
+    ))
 
   return (
     <div>
