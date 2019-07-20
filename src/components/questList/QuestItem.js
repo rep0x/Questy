@@ -1,7 +1,11 @@
 import React from 'react'
 
+// C O M P O N E N T S
+import Td from './Td'
+
 // A S S E T S
 import SvgCurrency from '../../assets/icons/currency'
+import SvgBin from '../../assets/icons/bin'
 import wave from '../../assets/waves/wave-row.png'
 
 const QuestItem = ({ quest }) => {
@@ -32,45 +36,37 @@ const QuestItem = ({ quest }) => {
   const doneTodos = quest.todos.filter(todoIsDone)
   let progress = doneTodos.length / quest.todos.length
 
-  // let spent = quest.spent
-  // let hours
-  // let minutes
-  // let spentOutput
-  // if (spent) {
-  //   hours = Math.floor(quest.spent)
-  //   minutes = Math.round((spent - hours) * 60)
-  //   spentOutput = (
-  //     <div className='label active'>
-  //       {hours}:{minutes}
-  //     </div>
-  //   )
-  // }
-  // let performance = 0
-  // let performanceOutput
-  // if (spent > 0) {
-  //   performance = Math.round((quest.estimation / quest.spent - 1) * 100)
-  //   if (quest.estimation < quest.spent) {
-  //     performanceOutput = <div className='label prio'>{performance}%</div>
-  //   } else {
-  //     performanceOutput = <div className='label done'>+{performance}%</div>
-  //   }
-  // }
-
   return (
     <div className='tr'>
-      <div className='td col-1'>{quest.id}</div>
-      <div className='td col-3'>{quest.epic}</div>
-      <div className='td col-9 regular'>{quest.title}</div>
-      <div className='td col-2'>
+      <div className='td col-1'>
+        <div className='quest-id'>{quest.id}</div>
+        <div className='delete-quest'>
+          <SvgBin />
+        </div>
+      </div>
+      <Td
+        data={quest.epic}
+        col={3}
+        editable={true}
+        type={'dropdown'}
+        options={['Prototype', 'Concept', 'Auth']}
+      />
+      <Td
+        data={quest.title}
+        col={8}
+        editable={true}
+        regular={true}
+        type={'input'}
+      />
+      <div className='td col-2 editable'>
         <div className={`label ${quest.status}`}>{quest.status}</div>
       </div>
-      <div className='td col-1'>
+      <div className='td col-2 editable'>
         <div className={`label ${quest.prio >= 1 ? 'prio' : ''}`}>
           {prioOutput}
         </div>
       </div>
-      <div className='td col-1'>{weigthOutput}</div>
-      {/* <div className='td col-1'>{spentOutput}</div> */}
+      <div className='td col-2 editable'>{weigthOutput}</div>
       <div className='td col-4'>
         <div
           className={`progress-container ${progress === 0 ? 'untouched' : ''}`}
@@ -91,8 +87,7 @@ const QuestItem = ({ quest }) => {
           </div>
         </div>
       </div>
-      {/* <div className='td col-2'>{performanceOutput}</div> */}
-      <div className='td col-3' />
+      <div className='td col-2' />
     </div>
   )
 }

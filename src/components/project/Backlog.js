@@ -1,4 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
+
+// A S S E T S
+import SvgAdd from '../../assets/icons/add'
 
 // C O M P O N E N T S
 import Header from './Header'
@@ -7,17 +10,44 @@ import QuestList from '../questList/QuestList'
 import QuestLog from '../questlog/QuestLog'
 
 // C O N T E X T
-// import { GlobalContext } from '../../context/GlobalContext'
+import { GlobalContext } from '../../context/GlobalContext'
 
 const Backlog = () => {
+  const { projects, setProjects } = useContext(GlobalContext)
+  const currentProject = projects[0].name
+
+  const changeProject = () => {}
+
+  const createQuest = () => {
+    //   let updated_quests = [...quests]
+    //   updated_quests.push(quest)
+    //   // Publish to State
+    //   setQuests(updated_quests)
+    //   // Publish to localStorage
+    //   localStorage.setItem('quests', JSON.stringify(updated_quests))
+    //   // Reset 'createQuest' input
+    //   setQuest({
+    //     title: ''
+    //   })
+  }
   return (
     <Fragment>
-      <Header />
+      <Header
+        currentProject={currentProject}
+        projects={projects}
+        changeProject={changeProject}
+      />
       <div className='app-container'>
         <AppNav />
         <div className='app-main box'>
           <div className='box-header'>
             <span className='title'>Backlog</span>
+            <button
+              className='btn btn-icon-only btn__white br-t-r'
+              onClick={createQuest}
+            >
+              <SvgAdd />
+            </button>
           </div>
           <div className='box-body'>
             <QuestList />

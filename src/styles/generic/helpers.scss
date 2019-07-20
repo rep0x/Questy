@@ -1,3 +1,7 @@
 .float-right {
   float: right;
 }
+
+.br-t-r {
+  border-radius: 0 var(--radius) 0 0;
+}

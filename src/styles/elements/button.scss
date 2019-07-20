@@ -1,4 +1,23 @@
 .btn {
+  height: 50px;
+  background-color: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  transition: var(--transition);
+  &:hover {
+    box-shadow: var(--box-shadow__primary);
+    cursor: pointer;
+  }
+  &__white {
+    background-color: var(--white);
+  }
+  &-icon-only {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &-auth {
     display: flex;
     justify-content: center;
@@ -22,11 +41,5 @@
         box-shadow: var(--box-shadow__primary);
       }
     }
-  }
-}
-
-svg {
-  g {
-    transition: all 1s ease-in-out;
   }
 }

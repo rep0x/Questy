@@ -1,0 +1,33 @@
+.table-dropdown {
+  width: 100%;
+  height: 100%;
+  &:hover,
+  &.open {
+    box-shadow: none;
+    background-color: transparent;
+    .selected .caret {
+      opacity: 1;
+    }
+  }
+  .selected {
+    background-color: transparent;
+    padding: 0;
+    .selected-item {
+      span {
+        font-size: 14px !important;
+      }
+    }
+    .caret {
+      opacity: 0;
+    }
+  }
+  .options {
+    z-index: 5;
+    top: 40px;
+    width: calc(100% + 26px);
+    left: -13px;
+    .option {
+      padding: 15px 13px;
+    }
+  }
+}

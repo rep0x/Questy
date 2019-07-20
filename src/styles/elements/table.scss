@@ -20,11 +20,11 @@
     &.col-6 {
       width: calc(100% * (6 / 24));
     }
+    &.col-8 {
+      width: calc(100% * (8 / 24));
+    }
     &.col-9 {
       width: calc(100% * (9 / 24));
-    }
-    &.col-6 {
-      width: calc(100% * (6 / 24));
     }
   }
 
@@ -55,9 +55,29 @@
     .tr {
       margin-bottom: 5px;
       transition: var(--transition);
+      .delete-quest {
+        display: none;
+      }
       &:hover {
         box-shadow: var(--box-shadow__primary);
         cursor: pointer;
+        .quest-id {
+          display: none;
+        }
+        .delete-quest {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--red);
+          border-radius: var(--radius-sm);
+          transition: var(--transition);
+          &:hover {
+            box-shadow: var(--box-shadow__primary);
+            cursor: pointer;
+          }
+        }
       }
       .td {
         margin-right: 5px;
@@ -67,6 +87,7 @@
         font-weight: bold;
         display: flex;
         align-items: center;
+        transition: var(--transition);
         &:last-child {
           margin-right: 0;
         }
@@ -76,6 +97,11 @@
         svg {
           max-height: 16px;
           max-width: 16px;
+        }
+        &.editable {
+          &:hover {
+            background-color: transparent;
+          }
         }
       }
       &:first-child {
