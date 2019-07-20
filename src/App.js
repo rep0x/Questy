@@ -33,7 +33,7 @@ const App = props => {
   }
 
   return (
-    <Router>
+    <Router basename="/Questy">
       <Switch>{routesOutput}</Switch>
       <Alert />
     </Router>
