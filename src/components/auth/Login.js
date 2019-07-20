@@ -4,8 +4,7 @@ import Input from '../elements/Input'
 import Checkbox from '../elements/Checkbox'
 import SvgArrowRight from '../../assets/icons/arrowRight'
 
-import { authenticationService } from '../../services';
-
+import { authenticationService } from '../../services'
 
 // C O N T E X T
 import { GlobalContext } from '../../context/GlobalContext'
@@ -45,7 +44,6 @@ const Login = props => {
   }
 
   const formSubmit = e => {
-
     if (formData.username === '' || formData.password === '') {
       setAlert({
         type: 'notice',
@@ -53,28 +51,24 @@ const Login = props => {
         isOpen: true
       })
     } else {
-      authenticationService.login(formData.username, formData.password)
-        .then(
-          user => {
-            setAlert({
-              type: 'success',
-              msg: 'Successfully signed in',
-              isOpen: true
-            })
-            setCurrentUser(user.username)
-            props.history.push('/project')
-            
-          },
-          error => {
-            setAlert({
-              type: 'error',
-              msg: error,
-              isOpen: true
-            })
-          }
-        );
+      authenticationService.login(formData.username, formData.password).then(
+        user => {
+          setAlert({
+            type: 'success',
+            msg: 'Successfully signed in',
+            isOpen: true
+          })
+          setCurrentUser(user.username)
+        },
+        error => {
+          setAlert({
+            type: 'error',
+            msg: 'Username or password is wrong',
+            isOpen: true
+          })
+        }
+      )
     }
-
 
     e.preventDefault()
   }

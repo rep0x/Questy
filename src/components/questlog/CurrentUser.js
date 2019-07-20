@@ -9,13 +9,14 @@ import SvgSettings from '../../assets/icons/apps/settings'
 import { GlobalContext } from '../../context/GlobalContext'
 
 const CurrentUser = () => {
-  const { setAlert } = useContext(GlobalContext)
+  const { setAlert, setCurrentUser } = useContext(GlobalContext)
   const signOut = () => {
     setAlert({
       type: 'success',
       msg: 'Successfully signed out',
       isOpen: true
     })
+    setCurrentUser()
   }
   return (
     <div className='box-footer user'>

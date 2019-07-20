@@ -14,7 +14,6 @@ import { GlobalContext } from './context/GlobalContext'
 
 const App = props => {
   const { currentUser } = useContext(GlobalContext)
-  console.log("currentUser", currentUser)
 
   let routesOutput = ''
 
@@ -22,7 +21,6 @@ const App = props => {
     routesOutput = (
       <Fragment>
         <ProjectLayout exact path='/' component={Backlog} />
-        <ProjectLayout path='/projects' component={Backlog} />
       </Fragment>
     )
   } else {
@@ -36,9 +34,7 @@ const App = props => {
 
   return (
     <Router>
-      <Switch>
-        {routesOutput}
-      </Switch>
+      <Switch>{routesOutput}</Switch>
       <Alert />
     </Router>
   )
