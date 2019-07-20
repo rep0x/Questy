@@ -87,13 +87,11 @@ const QuestList = () => {
           <div className='tr'>
             <div className='th col-1'>ID</div>
             <div className='th col-3'>Epic</div>
-            <div className='th col-6'>Title</div>
+            <div className='th col-9'>Title</div>
             <div className='th col-2'>Status</div>
             <div className='th col-1'>Prio</div>
             <div className='th col-1'>Weight</div>
-            <div className='th col-1'>Spent</div>
             <div className='th col-4'>Progress</div>
-            <div className='th col-2'>Performance</div>
             <div className='th col-3'>Contributors</div>
           </div>
         </div>
