@@ -5,9 +5,17 @@
   box-shadow: none;
   outline: none;
   transition: var(--transition);
+  svg {
+    transition: var(--transition-cubic_300);
+  }
   &:hover {
     box-shadow: var(--box-shadow__primary);
     cursor: pointer;
+  }
+  &.rotate-45 {
+    svg {
+      transform: rotate(135deg);
+    }
   }
   &__white {
     background-color: var(--white);

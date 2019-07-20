@@ -17,14 +17,15 @@ const Theme = () => {
   const toggleTheme = () => {
     updatedTheme = !updatedTheme
     setTheme(updatedTheme)
-    console.log('Läuft')
   }
   const Root = styled.div`
     --black: ${theme ? 'rgba(44, 44, 44, 1)' : 'rgba(255, 255, 255, 1)'};
     --black_25: ${theme ? 'rgba(44, 44, 44, .25)' : 'rgba(255, 255, 255, .25)'};
     --black_50: ${theme ? 'rgba(44, 44, 44, .50)' : 'rgba(255, 255, 255, .50)'};
-    --black_05: ${theme ? 'rgba(44, 44, 44, .05)' : 'rgba(255, 255, 255, .05)'};
+    --black_25: ${theme ? 'rgba(44, 44, 44, .25)' : 'rgba(255, 255, 255, .25)'};
+    --black_15: ${theme ? 'rgba(44, 44, 44, .15)' : 'rgba(255, 255, 255, .15)'};
     --black_10: ${theme ? 'rgba(44, 44, 44, .1)' : 'rgba(255, 255, 255, .1)'};
+    --black_05: ${theme ? 'rgba(44, 44, 44, .05)' : 'rgba(255, 255, 255, .05)'};
     --dark: ${theme ? 'rgba(65, 65, 65, 1)' : 'rgba(235, 234, 236, 1)'};
     --light: ${theme ? 'rgba(235, 234, 236, 1)' : 'rgba(65, 65, 65, 1)'};
     --light_50: ${theme ? 'rgba(235, 234, 236, 0.5)' : 'rgba(65, 65, 65, 0.5)'};

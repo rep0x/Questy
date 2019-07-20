@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 
 // A S S E T S
 import SvgAdd from '../../assets/icons/add'
@@ -6,6 +6,7 @@ import SvgAdd from '../../assets/icons/add'
 // C O M P O N E N T S
 import Header from './Header'
 import AppNav from './AppNav'
+import CreateQuest from './CreateQuest'
 import QuestList from '../questList/QuestList'
 import QuestLog from '../questlog/QuestLog'
 
@@ -16,35 +17,40 @@ const Backlog = () => {
   const { projects } = useContext(GlobalContext)
   const currentProject = projects[0].name
 
-  const changeProject = () => {}
+  const [open, setOpen] = useState(false)
 
-  const createQuest = () => {
-    //   let updated_quests = [...quests]
-    //   updated_quests.push(quest)
-    //   // Publish to State
-    //   setQuests(updated_quests)
-    //   // Publish to localStorage
-    //   localStorage.setItem('quests', JSON.stringify(updated_quests))
-    //   // Reset 'createQuest' input
-    //   setQuest({
-    //     title: ''
-    //   })
+  const toggleCreateQuest = () => {
+    let updatedValue = !open
+    setOpen(updatedValue)
+    console.log('getoggled')
   }
+
+  // const createQuest = () => {
+  //   //   let updated_quests = [...quests]
+  //   //   updated_quests.push(quest)
+  //   //   // Publish to State
+  //   //   setQuests(updated_quests)
+  //   //   // Publish to localStorage
+  //   //   localStorage.setItem('quests', JSON.stringify(updated_quests))
+  //   //   // Reset 'createQuest' input
+  //   //   setQuest({
+  //   //     title: ''
+  //   //   })
+  //   console.log('Create Quest')
+  // }
   return (
     <Fragment>
-      <Header
-        currentProject={currentProject}
-        projects={projects}
-        changeProject={changeProject}
-      />
+      <Header currentProject={currentProject} projects={projects} />
       <div className='app-container'>
         <AppNav />
         <div className='app-main box'>
           <div className='box-header'>
             <span className='title'>Backlog</span>
             <button
-              className='btn btn-icon-only btn__white br-t-r'
-              onClick={createQuest}
+              className={`btn btn-icon-only btn__white br-t-r ${
+                open ? 'rotate-45' : ''
+              }`}
+              onClick={toggleCreateQuest}
             >
               <SvgAdd />
             </button>
@@ -52,6 +58,7 @@ const Backlog = () => {
           <div className='box-body'>
             <QuestList />
           </div>
+          <CreateQuest />
         </div>
       </div>
       <QuestLog />

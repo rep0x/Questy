@@ -25,7 +25,7 @@ export const GlobalContextProvider = props => {
     isOpen: false
   })
 
-  const [currentUser, setCurrentUser] = useState()
+  const [currentUser, setCurrentUser] = useState('Lorem')
 
   const [theme, setTheme] = useState(false)
 

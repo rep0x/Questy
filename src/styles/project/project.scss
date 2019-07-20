@@ -21,9 +21,21 @@
       z-index: 2;
       margin-left: 50px;
       height: 100%;
+      overflow: hidden;
       .box-body {
+        position: relative;
         overflow-y: auto;
         height: calc(100% - 50px);
+      }
+      .sidebar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 400px;
+        background-color: var(--white);
+        padding: 30px;
+        box-shadow: var(--box-shadow);
       }
     }
   }
