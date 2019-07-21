@@ -24,7 +24,7 @@ const logo = () => {
             transform='translate(0 0)'
             fill='none'
             stroke='var(--black)'
-            stroke-width='2'
+            strokeWidth='2'
           >
             <circle cx='23.447' cy='23.447' r='23.447' stroke='none' />
             <circle cx='23.447' cy='23.447' r='22.447' fill='none' />
