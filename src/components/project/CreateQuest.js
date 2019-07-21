@@ -45,6 +45,12 @@ const CreateQuest = ({ closed }) => {
     setFormData(newFormData)
     console.log('Change priority in CreateQuest')
   }
+  if (closed === false) {
+    let firstElement = document.getElementById('title')
+    setTimeout(function() {
+      firstElement.focus()
+    }, 200)
+  }
   return (
     <div className={`sidebar ${closed}`}>
       <form action='submit' style={{ marginTop: 40 }}>
@@ -58,7 +64,7 @@ const CreateQuest = ({ closed }) => {
           minLength={3}
           updateValidation={validateTitle}
         />
-        <div className='field dropdown last'>
+        <div className='field dropdown last' tabIndex={0}>
           <Dropdown
             label=''
             id='priority'
