@@ -17,10 +17,10 @@
     width: calc(100% - 430px);
     height: calc(100% - 80px);
     .app-main {
-      position: relative;
       z-index: 2;
       margin-left: 50px;
       height: 100%;
+      position: relative;
       overflow: hidden;
       .box-header {
         .btn {
@@ -39,17 +39,15 @@
         background-color: var(--white);
         padding: 30px;
         box-shadow: var(--box-shadow);
-        transition: var(--transition);
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-content: center;
-        position: absolute !important;
+        right: -410px;
         top: 0;
-        right: 0;
-        transform: translateX(0);
-        &.closed {
-          transform: translateX(400px);
+        position: absolute;
+        transition: var(--transition);
+        &.false {
+          right: 0px;
         }
       }
     }

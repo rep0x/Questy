@@ -17,12 +17,11 @@ const Backlog = () => {
   const { projects } = useContext(GlobalContext)
   const currentProject = projects[0].name
 
-  const [open, setOpen] = useState(false)
+  const [closed, setClosed] = useState(true)
 
   const toggleCreateQuest = () => {
-    let updatedValue = !open
-    setOpen(updatedValue)
-    console.log('getoggled')
+    let updatedValue = !closed
+    setClosed(updatedValue)
   }
 
   // const createQuest = () => {
@@ -48,7 +47,7 @@ const Backlog = () => {
             <span className='title'>Backlog</span>
             <button
               className={`btn btn-icon-only btn__white br-t-r ${
-                open ? 'rotate-45' : ''
+                closed ? '' : 'rotate-45'
               }`}
               onClick={toggleCreateQuest}
             >
@@ -58,7 +57,7 @@ const Backlog = () => {
           <div className='box-body'>
             <QuestList />
           </div>
-          <CreateQuest open={open} />
+          <CreateQuest closed={closed} />
         </div>
       </div>
       <QuestLog />

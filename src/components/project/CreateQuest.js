@@ -8,7 +8,7 @@ import SvgArrowRight from '../../assets/icons/arrowRight'
 import Input from '../elements/Input'
 import Dropdown from '../elements/Dropdown'
 
-const CreateQuest = ({ open }) => {
+const CreateQuest = ({ closed }) => {
   const [validForm, setValidForm] = useState(false)
   const [validTitle, setValidTitle] = useState(false)
   const [formData, setFormData] = useState({
@@ -46,14 +46,15 @@ const CreateQuest = ({ open }) => {
     console.log('Change priority in CreateQuest')
   }
   return (
-    <div className={`sidebar ${open ? '' : 'closed'}`}>
-      <form action='submit'>
+    <div className={`sidebar ${closed}`}>
+      <form action='submit' style={{ marginTop: 40 }}>
         <h1>Create Quest</h1>
         <Input
           id='title'
           type='text'
           placeholder='Title'
           firstChild={true}
+          autofocus={false}
           minLength={3}
           updateValidation={validateTitle}
         />

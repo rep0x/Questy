@@ -89,6 +89,7 @@ const Login = props => {
           firstChild={true}
           minLength={3}
           updateValidation={validateUsername}
+          autofocus={true}
         />
         <Input
           id='password'

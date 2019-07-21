@@ -7,7 +7,8 @@ const Input = ({
   firstChild,
   lastChild,
   minLength,
-  updateValidation
+  updateValidation,
+  autofocus
 }) => {
   const [focus, setFocus] = useState(false)
   const [value, setValue] = useState('')
@@ -62,7 +63,7 @@ const Input = ({
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}
-        autoFocus={firstChild ? true : false}
+        autoFocus={autofocus ? true : false}
       />
       <span className='placeholder hidden' onClick={onClickPlaceholder}>
         {placeholder ? placeholder : 'Click me'}

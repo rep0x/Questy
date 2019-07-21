@@ -1,6 +1,7 @@
 .field.checkbox {
   display: flex;
   align-items: center;
+  background-color: transparent;
   &:hover {
     cursor: pointer;
   }
