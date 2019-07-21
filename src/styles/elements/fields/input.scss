@@ -1,6 +1,9 @@
-.field.input {
-  position: relative;
+.field {
   background-color: var(--light_50);
+  position: relative;
+}
+
+.field.input {
   input {
     width: 100%;
     height: 54px;

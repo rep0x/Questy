@@ -58,7 +58,7 @@ const Backlog = () => {
           <div className='box-body'>
             <QuestList />
           </div>
-          <CreateQuest />
+          <CreateQuest open={open} />
         </div>
       </div>
       <QuestLog />

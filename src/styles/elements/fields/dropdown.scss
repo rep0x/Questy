@@ -90,3 +90,65 @@
     }
   }
 }
+
+form .field.dropdown .dropdown {
+  width: 100%;
+  height: 54px;
+  color: var(--dark);
+  font-size: 14px;
+  padding: 0 15px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  &.open {
+    box-shadow: var(--box-shadow__primary);
+    .selected {
+      border-radius: 0;
+      .caret {
+        transform: rotate(180deg);
+      }
+    }
+    .options {
+      box-shadow: var(--box-shadow__primary);
+      display: flex;
+    }
+  }
+
+  .selected {
+    background-color: transparent;
+    padding: 0;
+    .caret {
+      margin-right: 8px;
+    }
+  }
+
+  .options {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    top: 54px;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    z-index: 3;
+    border-radius: 0 0 var(--radius) var(--radius);
+    transition: var(--transition);
+    .option {
+      height: 54px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+      &:last-child {
+        border-radius: 0 0 var(--radius) var(--radius);
+      }
+      &:hover {
+        background-color: var(--light_50);
+        cursor: pointer;
+      }
+    }
+  }
+}

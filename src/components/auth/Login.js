@@ -1,10 +1,15 @@
 import React, { Fragment, useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import Input from '../elements/Input'
-import Checkbox from '../elements/Checkbox'
+
+// A S S E T S
 import SvgArrowRight from '../../assets/icons/arrowRight'
 
+// A P I
 import { authenticationService } from '../../services'
+
+// C O M P O N E N T S
+import Input from '../elements/Input'
+import Checkbox from '../elements/Checkbox'
 
 // C O N T E X T
 import { GlobalContext } from '../../context/GlobalContext'
