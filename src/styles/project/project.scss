@@ -44,11 +44,12 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        position: absolute;
+        position: absolute !important;
         top: 0;
-        right: -400px;
-        &.open {
-          right: 0;
+        right: 0;
+        transform: translateX(0);
+        &.closed {
+          transform: translateX(400px);
         }
       }
     }

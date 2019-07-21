@@ -30,7 +30,7 @@ const CreateQuest = ({ open }) => {
 
   const formSubmit = e => {
     console.log(formData)
-    questsService.create(title)
+    questsService.create(formData.title)
     e.preventDefault()
   }
   let prioOptions = {
@@ -46,7 +46,7 @@ const CreateQuest = ({ open }) => {
     console.log('Change priority in CreateQuest')
   }
   return (
-    <div className={`sidebar ${open ? 'open' : ''}`}>
+    <div className={`sidebar ${open ? '' : 'closed'}`}>
       <form action='submit'>
         <h1>Create Quest</h1>
         <Input
