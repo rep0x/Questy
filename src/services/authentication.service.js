@@ -22,8 +22,10 @@ function login(email, password) {
     return fetch(`${config.apiUrl}/api/v1/login`, requestOptions)
         .then(handleResponse)
         .then(response => {
+            console.log(response)
             // store user details and jwt token in local storage to keep user logged in between page refreshes
             localStorage.setItem('currentUser', response.user);
+            localStorage.setItem('token', response.token);
             let user = JSON.parse(response.user) 
             currentUserSubject.next(user);
             return user;

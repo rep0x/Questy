@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { questsService } from '../../services'
 
 const CreateQuest = () => {
   const [title, setTitle] = useState('')
@@ -8,7 +9,8 @@ const CreateQuest = () => {
     setTitle(value)
   }
   const onClick = e => {
-    console.log('SUBMIT!!!')
+    console.log('SUBMIT!!!', title)
+    questsService.create(title)
     e.preventDefault()
   }
 
