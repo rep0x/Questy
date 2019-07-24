@@ -21,7 +21,8 @@
       "Roadmap",
       "Team",
       "Settings"
-    ]
+    ],
+    "nextQuestId": 43
   },
   {
     "id": 1,
@@ -35,7 +36,8 @@
       "Landing Page",
       "Auth",
       "Nav"
-    ]
+    ],
+    "nextQuestId": 23
   },
   {
     "id": 2,
@@ -49,6 +51,7 @@
       "Landing Page",
       "Auth",
       "Nav"
-    ]
+    ],
+    "nextQuestId": 24
   }
 ]

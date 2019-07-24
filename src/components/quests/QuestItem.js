@@ -1,7 +1,7 @@
 import React from 'react'
 
 // C O M P O N E N T S
-import Td from './Td'
+import Td from '../elements/table/Td'
 
 // A S S E T S
 import SvgCurrency from '../../assets/icons/currency'
@@ -10,31 +10,32 @@ import wave from '../../assets/waves/wave-row.png'
 
 const QuestItem = ({ quest, epics }) => {
   let prioOutput
-  if (quest.prio === 3) {
+  if (quest.priority === 3) {
     prioOutput = '!!!'
-  } else if (quest.prio === 2) {
+  } else if (quest.priority === 2) {
     prioOutput = '!!'
-  } else if (quest.prio === 1) {
+  } else if (quest.priority === 1) {
     prioOutput = '!'
   } else {
     prioOutput = 'TBD'
   }
 
-  let weigthOutput
-  if (quest.estimation >= 0) {
-    weigthOutput = (
-      <div className='label icon'>
-        <SvgCurrency />
-        {quest.estimation}
-      </div>
-    )
-  }
+  let weigthOutput = (
+    <div className='label icon'>
+      <SvgCurrency />
+      {quest.todos.length}
+    </div>
+  )
 
-  const todoIsDone = value => {
-    return value.isDone === true
+  let doneTodos = []
+  let progress = 0
+  if (quest.todos.length > 0) {
+    const todoIsDone = value => {
+      return value.isDone === true
+    }
+    doneTodos = quest.todos.filter(todoIsDone)
+    progress = doneTodos.length / quest.todos.length
   }
-  const doneTodos = quest.todos.filter(todoIsDone)
-  let progress = doneTodos.length / quest.todos.length
 
   return (
     <div className='tr'>
@@ -62,7 +63,7 @@ const QuestItem = ({ quest, epics }) => {
         <div className={`label ${quest.status}`}>{quest.status}</div>
       </div>
       <div className='td col-2 editable'>
-        <div className={`label ${quest.prio >= 1 ? 'prio' : ''}`}>
+        <div className={`label ${quest.priority >= 1 ? 'prio' : ''}`}>
           {prioOutput}
         </div>
       </div>

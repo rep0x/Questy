@@ -1,16 +1,16 @@
 import React, { useContext } from 'react'
 
 // C O M P O N E N T S
-import Dropdown from '../elements/Dropdown'
+import ProjectDropdown from '../../elements/ProjectDropdown'
 
 // A S S E T S
-import SvgMenu from '../../assets/icons/menu'
+import SvgMenu from '../../../assets/icons/menu'
 
 // D A T A
-import initialProjects from '../../data/projects.json'
+import initialProjects from '../../../data/projects.json'
 
 // C O N T E X T
-import { GlobalContext } from '../../context/GlobalContext'
+import { GlobalContext } from '../../../context/GlobalContext'
 
 const Nav = () => {
   const { currentProject, projects, setCurrentProject } = useContext(
@@ -37,7 +37,10 @@ const Nav = () => {
       <div className='menu'>
         <SvgMenu />
       </div>
-      <Dropdown options={dropdownOptions} changeCurrent={changeCurrent} />
+      <ProjectDropdown
+        options={dropdownOptions}
+        changeCurrent={changeCurrent}
+      />
     </nav>
   )
 }

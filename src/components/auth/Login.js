@@ -8,8 +8,8 @@ import SvgArrowRight from '../../assets/icons/arrowRight'
 import { authenticationService } from '../../services'
 
 // C O M P O N E N T S
-import Input from '../elements/Input'
-import Checkbox from '../elements/Checkbox'
+import Input from '../elements/fields/Input'
+import Checkbox from '../elements/fields/Checkbox'
 
 // C O N T E X T
 import { GlobalContext } from '../../context/GlobalContext'

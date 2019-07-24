@@ -4,18 +4,17 @@ import React, { Fragment, useContext, useState } from 'react'
 import SvgAdd from '../../assets/icons/add'
 
 // C O M P O N E N T S
-import Header from './Header'
+import Header from './header/Header'
 import AppNav from './AppNav'
-import CreateQuest from './CreateQuest'
-import QuestList from '../questList/QuestList'
+import CreateQuest from '../quests/CreateQuest'
+import QuestList from '../quests/QuestList'
 import QuestLog from '../questlog/QuestLog'
 
 // C O N T E X T
 import { GlobalContext } from '../../context/GlobalContext'
 
 const Backlog = () => {
-  const { projects } = useContext(GlobalContext)
-  const currentProject = projects[0].name
+  const { projects, currentProject } = useContext(GlobalContext)
 
   const [closed, setClosed] = useState(true)
 
@@ -24,19 +23,6 @@ const Backlog = () => {
     setClosed(updatedValue)
   }
 
-  // const createQuest = () => {
-  //   //   let updated_quests = [...quests]
-  //   //   updated_quests.push(quest)
-  //   //   // Publish to State
-  //   //   setQuests(updated_quests)
-  //   //   // Publish to localStorage
-  //   //   localStorage.setItem('quests', JSON.stringify(updated_quests))
-  //   //   // Reset 'createQuest' input
-  //   //   setQuest({
-  //   //     title: ''
-  //   //   })
-  //   console.log('Create Quest')
-  // }
   return (
     <Fragment>
       <Header currentProject={currentProject} projects={projects} />
@@ -57,7 +43,7 @@ const Backlog = () => {
           <div className='box-body'>
             <QuestList />
           </div>
-          <CreateQuest closed={closed} />
+          <CreateQuest closed={closed} currentProject={currentProject} />
         </div>
       </div>
       <QuestLog />

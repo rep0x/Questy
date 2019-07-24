@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // A S S E T S
-import SvgCaretDown from '../../assets/icons/caretDown'
+import SvgCaretDown from '../../../assets/icons/caretDown'
 
 const Dropdown = ({ options, currentItem }) => {
   const [open, setOpen] = useState(false)

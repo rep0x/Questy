@@ -1,8 +1,8 @@
 import React from 'react'
 
 // C O M P O N E N T
-import TableInput from '../questList/TableInput'
-import TableDropdown from '../questList/TableDropdown'
+import TableInput from './TableInput'
+import TableDropdown from './TableDropdown'
 
 const Td = ({ data, col, editable, regular, type, options }) => {
   let dataOutput

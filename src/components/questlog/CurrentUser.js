@@ -9,7 +9,7 @@ import SvgSettings from '../../assets/icons/apps/settings'
 import { GlobalContext } from '../../context/GlobalContext'
 
 const CurrentUser = () => {
-  const { setAlert, setCurrentUser } = useContext(GlobalContext)
+  const { setAlert, currentUser, setCurrentUser } = useContext(GlobalContext)
   const signOut = () => {
     setAlert({
       type: 'success',
@@ -30,7 +30,7 @@ const CurrentUser = () => {
           <div className='user-avatar-overlay' />
         </div>
         <div className='user-info'>
-          <span className='user-name'>r3p0x</span>
+          <span className='user-name'>{currentUser}</span>
           <span className='user-role'>Designer</span>
         </div>
       </div>

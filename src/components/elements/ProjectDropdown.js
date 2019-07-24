@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 // A S S E T S
 import SvgCaretDown from '../../assets/icons/caretDown'
 
-const Dropdown = ({ options, changeCurrent }) => {
+const ProjectDropdown = ({ options, changeCurrent }) => {
   const [open, setOpen] = useState(false)
   const [current, setCurrent] = useState(options.default)
 
@@ -46,4 +46,4 @@ const Dropdown = ({ options, changeCurrent }) => {
   )
 }
 
-export default Dropdown
+export default ProjectDropdown
