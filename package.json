@@ -7,7 +7,7 @@
     "@iota/core": "^1.0.0-beta.17",
     "@iota/mam": "^0.7.3",
     "iota-generate-seed": "^1.0.0",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
